@@ -6,7 +6,7 @@ public class Starter {
 	private final static String FILE_ORIGINAL_XML = "orig_cbilling.xmltv.xml";
 	private final static String FILE_OUTPUT_NEW_GZ = "xmltv.xml.gz";
 	private final static String FILE_OUTPUT_XML = "cbilling.xmltv.xml";
-	private final static String WORKING_DIR = "C:/Users/HomePC/git/repository/myteleguide/output/";
+	private final static String WORKING_DIR = "D:\\Dev\\Workspace_new\\mytv\\output\\";
 	private final static String FILE_REMOVE_CHANNELS_TXT = "idremove.txt";
 
 	public static void main(String[] args) throws Exception {
@@ -20,7 +20,7 @@ public class Starter {
 				.idRemoveFile(FILE_REMOVE_CHANNELS_TXT)//
 				.build();
 
-		boolean extractOnly = true;
+		boolean extractOnly = false;
 		boolean doZip = true;
 
 		if (!extractOnly) {
@@ -36,6 +36,7 @@ public class Starter {
 			boolean compressGzip = fileDownloader.compressGzip();
 			System.out.println("zip file: " + compressGzip);
 		}
+		System.out.println("done!");
 	}
 
 }
